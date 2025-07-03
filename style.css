@@ -1,7 +1,6 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #f7c6c6;
   font-family: Arial, sans-serif;
-  text-align: center;
   padding: 50px;
 }
 
@@ -20,4 +19,8 @@ h3 {
 p {
   color: #333;
   font-size: 18px;
+}
+
+img {
+    height: auto;
 }
