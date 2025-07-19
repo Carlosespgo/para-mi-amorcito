@@ -1,26 +1,290 @@
 body {
-  background-color: #ffa3ce;
-  font-family: Arial, sans-serif;
-  padding: 50px;
+    background: linear-gradient(to bottom, #ffe4e1, #fff0f5);
 }
 
-h1 {
-  color: #4e0072;
+header {
+    background-color: skyblue;
+    padding: 10px;
 }
 
-h2 {
-  color: #4e0072;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
 }
 
-h3 {
-  color: #4e0072;
+nav a {
+    color: purple;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-p {
-  color: #333;
-  font-size: 18px;
+nav img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover;
+    border: 2px solid white; /* Opcional, para que parezca logo */
 }
 
-img {
-    height: 600px;
+main {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* oscurece un poco la imagen para que el texto resalte */
+    z-index: 0;
+}
+
+main h1 {
+    position: relative;
+    color: rgb(255, 133, 255);
+    font-size: 2.5em;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    z-index: 1;
+    margin: 0;
+}
+
+#ella, #yo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* En #yo cambiamos el orden con row-reverse como antes */
+#yo {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor de imagen + título */
+#ella .imagen-con-titulo,
+#yo .imagen-con-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del título */
+#ella h2,
+#yo h2 {
+    color: purple;
+    margin-bottom: 10px;
+}
+
+/* Imagen con borde azul oscuro */
+#ella img,
+#yo img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid navy;
+}
+
+/* Texto al lado */
+#ella p,
+#yo p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#Fechas {
+    background-color: #f0f8ff; /* Azul suave tipo cielo */
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#Fechas h1 {
+    color: purple;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Lista mejor estructurada y elegante */
+#Fechas ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+#Fechas li {
+    color: black;
+    font-size: 18px;
+    margin: 8px 0;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+#Fechas li:hover {
+    transform: translateX(5px);
+    color: #8a2be2;
+}
+
+#Metas {
+    background-color: #e6f7ff;
+    border: 3px solid #8a2be2;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#Metas h1 {
+    color: purple;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#Metas p {
+    background-color: #fff;
+    border: 2px dashed #8a2be2;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Extra decorativo: ícono de corazón al inicio de cada meta */
+#Metas p::before {
+    content: "💖";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+#Citas {
+    background-color: #fffafc;
+    padding: 30px;
+    text-align: center;
+}
+
+#Citas h1 {
+    color: purple;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Estilos para los divs individuales de cada cita */
+#Citas div {
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    background-color: #ffc9f8;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilo para cada título */
+#Citas h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #8a2be2;
+}
+
+/* Imagen en tamaño mediano y centrada */
+#Citas img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#canciones {
+    background-color: #fff0f5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#canciones h1 {
+    color: purple;
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Contenedor flexible para los videos */
+#canciones iframe {
+    margin: 15px;
+    border-radius: 10px;
+    border: 3px solid #8a2be2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+#canciones iframe:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #ffe4e1; /* Un rosa suave encantador */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #8a2be2;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Georgia', serif;
+}
+
+footer h1 {
+    color: purple;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+footer p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Decorativo: un corazón flotando arriba del mensaje */
+footer p::before {
+    content: "❤️";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
 }
